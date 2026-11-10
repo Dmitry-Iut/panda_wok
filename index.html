@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#7a0f12">
+<title>Панда Вок — китайский ресторанчик</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ===== ТИТУЛЬНЫЙ ЭКРАН ===== -->
+  <section id="scr-title" class="screen active">
+    <div class="title-lanterns"><span>🏮</span><span>🏮</span><span>🏮</span><span>🏮</span></div>
+    <div class="title-food" id="title-food"></div>
+    <div class="title-chef">
+      <div class="chef-hat"></div>
+      <div class="chef-face">🐼</div>
+    </div>
+    <h1 class="logo">Панда&nbsp;Вок</h1>
+    <div class="logo-sub">熊猫 · китайский ресторанчик · 熊猫</div>
+    <p class="title-text">Начни с маленького лотка с лапшой и построй самый большой ресторан города!</p>
+    <button class="btn big" id="btn-play">Играть ▶</button>
+    <div class="title-row">
+      <button class="btn small" id="btn-sound">🔊 Звук</button>
+      <button class="btn small" id="btn-music">🎵 Музыка</button>
+    </div>
+    <button class="link-btn" id="btn-reset">Сбросить прогресс</button>
+  </section>
+
+  <!-- ===== КАРТА УРОВНЕЙ ===== -->
+  <section id="scr-map" class="screen">
+    <div class="topbar">
+      <button class="hbtn" id="map-back">🏠</button>
+      <div class="pill" id="map-coins">🪙 0</div>
+      <div class="pill" id="map-stars">⭐ 0</div>
+      <button class="btn small shop-btn" id="map-shop">🛒 Улучшения</button>
+    </div>
+    <div id="map-list"></div>
+  </section>
+
+  <!-- ===== МАГАЗИН УЛУЧШЕНИЙ ===== -->
+  <section id="scr-shop" class="screen">
+    <div class="topbar">
+      <button class="hbtn" id="shop-back">◀</button>
+      <div class="topbar-title">Улучшения</div>
+      <div class="pill" id="shop-coins">🪙 0</div>
+    </div>
+    <div class="tabs">
+      <button class="tab active" data-tab="kitchen">🥘 Кухня</button>
+      <button class="tab" data-tab="decor">🪑 Зал</button>
+      <button class="tab" data-tab="resto">🏯 Ресторан</button>
+    </div>
+    <div id="shop-list"></div>
+  </section>
+
+  <!-- ===== ИГРА ===== -->
+  <section id="scr-game" class="screen">
+    <div id="hud">
+      <button class="hbtn" id="btn-pause">⏸</button>
+      <div class="hlvl"><small>УР.</small><b id="hud-lvl">1</b></div>
+      <div class="goal" id="goal">
+        <div class="fill" id="goal-fill"></div>
+        <span class="coinic" id="goal-coin">🪙</span>
+        <div class="txt" id="goal-txt">0 / 100</div>
+        <span class="gstar" id="gs0">⭐</span>
+        <span class="gstar" id="gs1">⭐</span>
+        <span class="gstar" id="gs2">⭐</span>
+      </div>
+      <div class="hinfo">
+        <div id="hud-time">⏱ 1:20</div>
+        <div id="hud-cust">👥 0/9</div>
+        <div id="hud-lost">😡 0/3</div>
+      </div>
+    </div>
+    <div id="hall"></div>
+    <div class="counter-edge"></div>
+    <div id="kitchen"></div>
+  </section>
+
+  <div id="modal" class="modal hidden"><div class="modal-box" id="modal-box"></div></div>
+  <div id="toast"></div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
